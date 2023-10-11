@@ -1,0 +1,141 @@
+html {
+    background: rgb(221,145,17);
+    background: linear-gradient(
+                    90deg,
+                    rgba(221,145,17,1) 0%,
+                    rgba(255,9,28,1) 45%,
+                    rgba(250,0,255,1) 100%
+                );
+
+    min-height: 100%;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-size: 12pt;
+
+    flex-grow: 1;
+    background-color: white;
+
+    /* Flexbox, um den Footer nach unten zu drücken, auch wenn im <main>
+     * zu wenig oder kein Inhalt steht. Das <main> besitzt hierzu passend
+     * noch die Anweisung "flex-grow: 1", um Header und Footer auseinander
+     * zu drücken.
+     */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
+a, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#searchbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+header > * {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav li {
+    display: inline;
+    padding-left: 1em;
+    font-weight: bold;
+}
+
+main {
+    flex-grow: 1;
+}
+
+main > section {
+    display: flex;
+    justify-content: center;
+}
+
+main > section.Background{
+    background-image: url(jumbotron-hintergrund.png);
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    text-align: center;
+
+    padding-top: 7em;
+    padding-bottom: 5em;
+}
+
+main > section.jumb.Background > div {
+    max-width: 35em;
+}
+
+main > section.Background h1 {
+    font-size: 400%;
+}
+
+main > section.narrow > div {
+    font-weight: bold;
+    font-size: 180%;
+
+    max-width: 15em;
+    text-align: center;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+footer {
+    background-color: #f0f0f0;
+    box-shadow: 0px -2px 3px rgba(0,0,0, 0.25);
+
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+footer > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 1.5em;
+}
